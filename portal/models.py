@@ -4,7 +4,6 @@ class Mech(models.Model):
     name = models.CharField()
     tonnage = models.IntegerField()
 
-
 class Warrior(models.Model):
     sibko = models.CharField(max_length=50)
     email = models.CharField(max_length=255)
