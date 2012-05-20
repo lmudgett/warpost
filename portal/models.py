@@ -1,8 +1,5 @@
 from django.db import models
-
-class Mech(models.Model):
-    name = models.CharField()
-    tonnage = models.IntegerField()
+from portal import portalModels
 
 class Warrior(models.Model):
     sibko = models.CharField(max_length=50)
@@ -10,7 +7,6 @@ class Warrior(models.Model):
     firstName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
     joined = models.DateField()
-    clan = models.ForeignKey(Clan)
+    clan = models.ForeignKey(portalModels.Clan)
 
-class Clan(models.Model):
-    name = models.CharField()
+
